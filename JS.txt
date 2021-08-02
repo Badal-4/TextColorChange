@@ -1,0 +1,29 @@
+import {LightningElement,wire,track} from 'lwc';
+import getRecords from '@salesforce/apex/AccountController.getRecords';
+
+export default class propDemo extends LightningElement{
+   @track options = [];
+    @track a_Flag = false;
+    @track textColorClass;
+ 
+    handle_Green_Text_Click(event){
+        this.textColorClass = 'green';
+    }
+ 
+    handle_Blue_Text_Click(event){
+        this.textColorClass = 'blue';
+    }
+ 
+    handle_Color_Change(event){
+ 
+        if(this.a_Flag){
+            this.template.querySelector('[data-id="Green_Button"]').click();
+            this.a_Flag = ! this.a_Flag;
+        }
+        else {
+            this.template.querySelector('[data-id="Blue_Button"]').click();
+            this.a_Flag = ! this.a_Flag;
+        }
+ 
+    }
+}

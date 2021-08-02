@@ -1,0 +1,12 @@
+<template>
+    <div class="slds-box slds-theme_default">
+    <b class={textColorClass}>
+        This is a Sample text used as an example to change color. 
+        <a href="www.Salesforce.fun">www.Salesforce.fun</a>
+    </b>
+    <br></br>
+    <lightning-button variant="brand" class="slds-button" data-id="Green_Button" label="Text Green" onclick={handle_Green_Text_Click}></lightning-button>
+    <lightning-button variant="brand" class="slds-button" data-id="Blue_Button" label="Text Blue" onclick={handle_Blue_Text_Click}></lightning-button>
+    <lightning-button variant="neutral" class="slds-button" label="Change Color"  onclick={handle_Color_Change}></lightning-button>
+    </div>
+</template>
